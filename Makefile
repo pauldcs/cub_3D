@@ -2,17 +2,12 @@ NAME = cub3D
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 
-SRCS_DIR = ./srcs
-OBJS_DIR = ./objs
-INCS_DIR = ./incs
-
 SRCS = \
 	srcs/main.c		\
 \
 	srcs/parse/c3d_parser.c			\
 	srcs/parse/c3d_is_cub_file.c	\
 	srcs/parse/c3d_map_is_ok.c		\
-	srcs/parse/c3d_read_all.c		\
 	srcs/parse/c3d_rgb_is_ok.c		\
 	srcs/parse/c3d_texture_is_ok.c	\
 \
@@ -24,17 +19,18 @@ SRCS = \
 	srcs/utils/c3d_putstr.c			\
 	srcs/utils/c3d_split_dynamic.c	\
 	srcs/utils/c3d_split_static.c	\
-	srcs/utils/c3d_str_to_uint.c		\
+	srcs/utils/c3d_str_to_uint.c	\
 	srcs/utils/c3d_strchr.c			\
 	srcs/utils/c3d_strcmp.c			\
 	srcs/utils/c3d_strcreate.c		\
 	srcs/utils/c3d_strlen.c			\
 	srcs/utils/c3d_strslen.c		\
+	srcs/utils/c3d_read_all.c		\
 
 SRCS_OBJS = $(SRCS:.c=.o)
 
 %.o:%.c
-	$(CC) $(CFLAGS) -o $@ -c $< -I $(INCS_DIR)
+	$(CC) $(CFLAGS) -o $@ -c $< -I ./incs
 
 all: $(NAME)
 

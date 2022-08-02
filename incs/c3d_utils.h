@@ -6,7 +6,7 @@
 /*   By: pducos <pducos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 13:54:20 by pducos            #+#    #+#             */
-/*   Updated: 2022/08/02 13:59:14 by pducos           ###   ########.fr       */
+/*   Updated: 2022/08/02 20:12:44 by pducos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int			c3d_strcmp(const char *a, const char *b);
 char		*c3d_strcreate(const char *s, size_t len);
 size_t		c3d_strlen(const char *str);
 size_t		c3d_strslen(size_t n, ...);
+char*		c3d_read_all(int fd);
 
 #endif /* c3d_parse.h */

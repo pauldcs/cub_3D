@@ -6,7 +6,7 @@
 /*   By: pducos <pducos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 22:07:48 by pducos            #+#    #+#             */
-/*   Updated: 2022/08/02 14:38:39 by pducos           ###   ########.fr       */
+/*   Updated: 2022/08/02 20:18:00 by pducos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ bool	c3d_is_cub_file(const char *filename)
 
 	len = c3d_strlen(filename);
 	if (len < 5 
-		|| c3d_strcmp(".cub", &filename[len - 4]))
+		|| c3d_strcmp(".cub", filename + len - 4))
 		return (false);
 	return (true);
 }
